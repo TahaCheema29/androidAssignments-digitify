@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AndroidAssignments"
         tools:targetApi="31">
         <activity
-            android:name=".RecyclerViews.LinearRvActivity"
+            android:name=".Navigtions.NavActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,23 +22,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EventListeners.EventListener2Activity"
+            android:name=".Fragments.FragmentActivity"
             android:exported="true">
-
         </activity>
+        <activity
+            android:name=".RecyclerViews.LinearRvActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EventListeners.EventListener2Activity"
+            android:exported="true" />
         <activity
             android:name=".EventListeners.EventListener1Activity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ConstraintLayouts.EditTextLayoutActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ConstraintLayouts.ButtonsLayoutActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
