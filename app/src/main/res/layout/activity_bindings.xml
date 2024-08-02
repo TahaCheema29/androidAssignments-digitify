@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F6F6FD"
-        tools:context=".bindings.BindingsActivity">
+        tools:context=".UIpractice.BindingsActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"

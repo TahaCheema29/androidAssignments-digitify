@@ -1,35 +1,28 @@
-package com.example.androidassignments.DataPersistence
+package com.example.androidassignments.dataPersistence
 
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidassignments.R
+import com.example.androidassignments.databinding.CourseRvItemBinding
 import kotlinx.coroutines.runBlocking
-import org.w3c.dom.Text
 
 class CourseRvAdapter(private var dataSet:List<Course>,private var appDb:CourseDataBase,private val activity: CourseActivity):
     RecyclerView.Adapter<CourseRvAdapter.ViewHolder>() {
-        
-        class ViewHolder(view:View):RecyclerView.ViewHolder(view){
-            val crsNameView:TextView=view.findViewById(R.id.textView24)
+
+        private lateinit var binding:CourseRvItemBinding
+        class ViewHolder(var view:CourseRvItemBinding):RecyclerView.ViewHolder(view.root){
+/*            val crsNameView:TextView=view.findViewById(R.id.textView24)
             val crsTrackView:TextView=view.findViewById(R.id.textView25)
             val crsDesView:TextView=view.findViewById(R.id.textView26)
             val crsDayView:TextView=view.findViewById(R.id.textView27)
             val crsIdView:TextView=view.findViewById(R.id.textView29)
             val crsDelete:ImageButton=view.findViewById(R.id.imageButton)
-            val crsUpdate:ImageButton=view.findViewById(R.id.imageButton2)
+            val crsUpdate:ImageButton=view.findView.ById(R.id.imageButton2)*/
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view= LayoutInflater.from(parent.context)
-            .inflate(R.layout.course_rv_item,parent,false)
-
-        return ViewHolder(view)
+        binding= CourseRvItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ViewHolder(binding)
     }
 
     override fun getItemCount(): Int{
@@ -38,7 +31,7 @@ class CourseRvAdapter(private var dataSet:List<Course>,private var appDb:CourseD
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        try {
+      /*  try {
 
             holder.crsIdView.text=dataSet[position].id.toString()+"."
             holder.crsNameView.text=dataSet[position].courseName
@@ -47,9 +40,12 @@ class CourseRvAdapter(private var dataSet:List<Course>,private var appDb:CourseD
             holder.crsDayView.text= dataSet[position].courseDuration+ " Days"
         }catch (e:NullPointerException){
             Log.d("TAG","AT HOLDER")
-        }
+        }*/
 
-        holder.crsDelete.setOnClickListener{
+
+        holder.view.model=dataSet[position]
+
+        holder.view.imageButton.setOnClickListener{
             runBlocking {
                 appDb.courseDoa().deleteCourse(Course(
                     id = dataSet[position].id, courseName = dataSet[position].courseName,
@@ -58,7 +54,7 @@ class CourseRvAdapter(private var dataSet:List<Course>,private var appDb:CourseD
                 ))
             }
         }
-        holder.crsUpdate.setOnClickListener{
+        holder.view.imageButton2.setOnClickListener{
             activity.showDialogBox(Course(
                 id = dataSet[position].id, courseName = dataSet[position].courseName,
                 courseDuration = dataSet[position].courseDuration, courseTracks = dataSet[position].courseTracks,

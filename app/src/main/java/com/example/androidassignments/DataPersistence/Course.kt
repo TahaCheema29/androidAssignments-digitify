@@ -1,4 +1,4 @@
-package com.example.androidassignments.DataPersistence
+package com.example.androidassignments.dataPersistence
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

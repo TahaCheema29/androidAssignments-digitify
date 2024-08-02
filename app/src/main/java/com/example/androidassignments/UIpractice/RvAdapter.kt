@@ -1,4 +1,4 @@
-package com.example.androidassignments.bindings
+package com.example.androidassignments.UIpractice
 
 import android.content.Context
 import android.view.LayoutInflater

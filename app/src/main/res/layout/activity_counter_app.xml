@@ -6,14 +6,14 @@
     <data>
         <variable
             name="model"
-            type="com.example.androidassignments.counterApp.DataModel" />
+            type="com.example.androidassignments.binding.counterApp.DataModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".counterApp.CounterAppActivity">
+        tools:context=".binding.counterApp.CounterAppActivity">
 
 
         <TextView

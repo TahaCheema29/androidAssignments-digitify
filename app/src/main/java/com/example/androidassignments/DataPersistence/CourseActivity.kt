@@ -1,21 +1,19 @@
-package com.example.androidassignments.DataPersistence
+package com.example.androidassignments.dataPersistence
 
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidassignments.R
 import com.example.androidassignments.databinding.ActivityCourseBinding
+import com.example.androidassignments.databinding.CustomCourseDailogBinding
 import kotlinx.coroutines.runBlocking
 
 class CourseActivity : AppCompatActivity() {
@@ -62,7 +60,7 @@ class CourseActivity : AppCompatActivity() {
         val dialog= Dialog(this)
         val dialogView= LayoutInflater.from(this).inflate(R.layout.custom_course_dailog,null)
         dialog.setContentView(dialogView)
-
+         
          val window = dialog.window
          if (window != null) {
              val layoutParams = WindowManager.LayoutParams()
@@ -71,7 +69,6 @@ class CourseActivity : AppCompatActivity() {
              layoutParams.height = 1500
              window.attributes = layoutParams
          }
-
 
          dialog.show()
 

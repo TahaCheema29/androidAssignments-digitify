@@ -1,4 +1,4 @@
-package com.example.androidassignments.DataPersistence
+package com.example.androidassignments.dataPersistence
 
 import android.content.Context
 import androidx.room.Database

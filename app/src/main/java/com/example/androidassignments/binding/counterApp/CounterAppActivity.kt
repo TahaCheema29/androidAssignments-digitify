@@ -1,4 +1,4 @@
-package com.example.androidassignments.counterApp
+package com.example.androidassignments.binding.counterApp
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -14,7 +14,7 @@ class CounterAppActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        val dataModel=DataModel(0)
+        val dataModel= DataModel(0)
         binding= DataBindingUtil.setContentView(this,R.layout.activity_counter_app)
 
         binding.button20.setOnClickListener {
