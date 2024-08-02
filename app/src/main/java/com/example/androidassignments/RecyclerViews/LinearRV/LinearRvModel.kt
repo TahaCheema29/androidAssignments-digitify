@@ -1,4 +1,4 @@
-package com.example.androidassignments.RecyclerViews
+package com.example.androidassignments.RecyclerViews.LinearRV
 
 data class LinearRvModel(
     val imgSrc:Int,

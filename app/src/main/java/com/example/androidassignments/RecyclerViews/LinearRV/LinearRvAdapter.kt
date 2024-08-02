@@ -1,4 +1,4 @@
-package com.example.androidassignments.RecyclerViews
+package com.example.androidassignments.RecyclerViews.LinearRV
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidassignments.R
 
-class LinearRvAdapter(private val dataSet:Array<LinearRvModel>,private val context: Context):
+class LinearRvAdapter(private val dataSet:Array<LinearRvModel>, private val context: Context):
     RecyclerView.Adapter<LinearRvAdapter.ViewHolder>(){
 
     class ViewHolder(view: View):RecyclerView.ViewHolder(view) {

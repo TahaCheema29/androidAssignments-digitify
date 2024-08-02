@@ -1,13 +1,7 @@
-package com.example.androidassignments.RecyclerViews
+package com.example.androidassignments.RecyclerViews.LinearRV
 
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidassignments.R
 import com.example.androidassignments.databinding.ActivityLinearRvBinding
@@ -31,7 +25,7 @@ class LinearRvActivity : AppCompatActivity() {
             LinearRvModel(R.drawable.prof,R.string.title_name,R.string.description_name,R.string.date_info),
         )
 
-        val linearRvAdapter=LinearRvAdapter(dataSet,this)
+        val linearRvAdapter= LinearRvAdapter(dataSet,this)
         val recyclerView=binding.recyclerView
         recyclerView.adapter=linearRvAdapter
         recyclerView.layoutManager=LinearLayoutManager(this)
