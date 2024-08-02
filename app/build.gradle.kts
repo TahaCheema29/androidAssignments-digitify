@@ -6,6 +6,8 @@ plugins {
     id("androidx.navigation.safeargs")
     id("kotlin-kapt")
     id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
+
 }
 android {
     namespace = "com.example.androidassignments"
@@ -67,8 +69,17 @@ dependencies {
     implementation(libs.converter.gson)
 
 
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-compiler:2.48")
+
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+}
+
+kapt {
+    correctErrorTypes = true
 }
