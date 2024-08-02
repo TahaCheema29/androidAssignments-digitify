@@ -13,10 +13,13 @@
         android:theme="@style/Theme.AndroidAssignments"
         tools:targetApi="31">
         <activity
-            android:name=".Bindings.bindingActivity"
-            android:exported="false" />
+            android:name=".SharedPreferences.SplashActivity"
+            android:exported="true" >
+        </activity>
+        <activity android:name=".SharedPreferences.SharedPreferenceActivity"
+            android:exported="false"/>
         <activity
-            android:name=".counterApp.CounterAppActivity"
+            android:name=".DataPersistence.CourseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".bindings.BindingsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".counterApp.CounterAppActivity"
+            android:exported="true" />
         <activity
             android:name=".RecyclerViews.StaggeredRV.StaggeredRvActivity"
             android:exported="true" />

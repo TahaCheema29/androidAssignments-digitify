@@ -1,8 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AndroidAssignments" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.AndroidAssignments" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#000000</item>
+<!--         <item name="colorPrimary">#F6F6FD</item>-->
+        <item name="colorPrimary">#7E4FB9</item>
     </style>
 
     <style name="Theme.AndroidAssignments" parent="Base.Theme.AndroidAssignments" />
